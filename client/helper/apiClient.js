@@ -16,7 +16,7 @@ export default function apiClient({ url, type = 'post', params = {}, data = {}})
 		nprogress.start()
 
 		const auth = storage.get('@auth') || {}
-		const request = superagent[type]('/api/' + url)
+		const request = superagent[type]('http://huaqie.com:17389/api/' + url)
 		params.token = auth.token
 		request.query(params)
 		request.send(data)
@@ -24,22 +24,21 @@ export default function apiClient({ url, type = 'post', params = {}, data = {}})
 		request.end((err, response) => {
 			xhrSet.delete(url)
 			nprogress.done()
-
 			if (err) {
 				window.location.href = '#/login'
 				alert(err.message)
-				return reject({code: 1, msg: err.message})
+				return reject({code: 1, message: err.message})
 			}
 			
 			const body = response.body || response.text || {}
-			const { code = 1, msg = '未知错误' } = body;
+			const { code = 1, message = '未知错误' } = body;
 
 			switch (+code) {
 				case 0:
 					resolve(body)
 					break
 				default:
-					alert(msg)
+					alert(message)
 					reject(body)
 			}
 		})

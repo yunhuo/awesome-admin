@@ -31,9 +31,9 @@ module.exports = {
 		]
 	},
 	output: {
-		path: path.join(__dirname, '..', 'dist'), // absolute path!
+		path: path.join(__dirname, '..', 'public', 'js'), // absolute path!
 		filename: '[name].js',
-		publicPath: '/dist/'
+		publicPath: '/public/'
 	},
 	module: {
 		loaders: [{ 

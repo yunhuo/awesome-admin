@@ -12224,7 +12224,7 @@ webpackJsonp([1],[
 			_nprogress2.default.start();
 
 			var auth = _simplestorage2.default.get('@auth') || {};
-			var request = _superagent2.default[type]('/api/' + url);
+			var request = _superagent2.default[type]('http://huaqie.com:17389/api/' + url);
 			params.token = auth.token;
 			request.query(params);
 			request.send(data);
@@ -12232,18 +12232,17 @@ webpackJsonp([1],[
 			request.end(function (err, response) {
 				xhrSet.delete(url);
 				_nprogress2.default.done();
-
 				if (err) {
 					window.location.href = '#/login';
 					(0, _alarm.alert)(err.message);
-					return reject({ code: 1, msg: err.message });
+					return reject({ code: 1, message: err.message });
 				}
 
 				var body = response.body || response.text || {};
 				var _body$code = body.code;
 				var code = _body$code === undefined ? 1 : _body$code;
-				var _body$msg = body.msg;
-				var msg = _body$msg === undefined ? '未知错误' : _body$msg;
+				var _body$message = body.message;
+				var message = _body$message === undefined ? '未知错误' : _body$message;
 
 
 				switch (+code) {
@@ -12251,7 +12250,7 @@ webpackJsonp([1],[
 						resolve(body);
 						break;
 					default:
-						(0, _alarm.alert)(msg);
+						(0, _alarm.alert)(message);
 						reject(body);
 				}
 			});
@@ -15814,51 +15813,51 @@ webpackJsonp([1],[
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var dependencies = [{
-		logo: '/img/stylus.png',
+		logo: '/public/img/stylus.png',
 		title: 'stylus',
 		content: 'Expressive, robust, feature-rich CSS language built for nodejs'
 	}, {
-		logo: '/img/grunt.png',
+		logo: '/public/img/grunt.png',
 		title: 'Grunt',
 		content: 'The JavaScript Task Runner'
 	}, {
-		logo: '/img/pm2.png',
+		logo: '/public/img/pm2.png',
 		title: 'pm2',
 		content: 'Production process manager for Node.js apps with a built-in load balancer'
 	}, {
-		logo: '/img/webpack.png',
+		logo: '/public/img/webpack.png',
 		title: 'webpack',
 		content: 'A bundler for javascript and friends.'
 	}, {
-		logo: '/img/label.png',
+		logo: '/public/img/label.png',
 		title: 'Bable',
 		content: 'Babel is a compiler for writing next generation JavaScript.'
 	}, {
-		logo: '/img/normalize.png',
+		logo: '/public/img/normalize.png',
 		title: 'normalize.css',
 		content: 'A modern alternative to CSS resets'
 	}, {
-		logo: '/img/gulp.png',
+		logo: '/public/img/gulp.png',
 		title: 'Gulp.js',
 		content: 'The streaming build system'
 	}, {
-		logo: '/img/bootstrap.png',
+		logo: '/public/img/bootstrap.png',
 		title: 'Bootstrap.js',
 		content: 'The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.'
 	}, {
-		logo: '/img/d3.png',
+		logo: '/public/img/d3.png',
 		title: 'D3.js',
 		content: 'A JavaScript library for manipulating documents based on data'
 	}, {
-		logo: '/img/material-ui.png',
+		logo: '/public/img/material-ui.png',
 		title: 'Material ui',
 		content: 'React Component that Implement Google\'s Material Design'
 	}, {
-		logo: '/img/react.png',
+		logo: '/public/img/react.png',
 		title: 'React',
 		content: 'A JavaScript library for building user interfaces'
 	}, {
-		logo: '/img/express.png',
+		logo: '/public/img/express.png',
 		title: 'Express',
 		content: 'Fast, unopinionated, minimalist web framework for Node.js'
 	}];
@@ -39572,7 +39571,7 @@ webpackJsonp([1],[
 			maxWidth: 360,
 			padding: '112px 48px 64px',
 			margin: '180px auto',
-			background: 'url(/img/logo-nd.png) no-repeat center 40px',
+			background: 'url(/public/img/logo-nd.png) no-repeat center 40px',
 			backgroundSize: 48
 		},
 		submitBtn: {
@@ -46134,7 +46133,7 @@ webpackJsonp([1],[
 
 
 	// module
-	exports.push([module.id, "/* latin-ext */\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 400;\n  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v15/Fcx7Wwv8OzT71A3E1XOAjvesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');\n  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;\n}\n/* latin */\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 400;\n  src: local('Roboto'), local('Roboto-Regular'), url(/font/CWB0XYA8bzo0kSThX0UTuA.woff2) format('woff2');\n  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;\n}\n/* latin-ext */\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 700;\n  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v15/97uahxiqZRoncBaCEI3aWxJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');\n  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;\n}\n/* latin */\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 700;\n  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v15/d-6IYplOFocCacKzxwXSOFtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');\n  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;\n}\n", ""]);
+	exports.push([module.id, "/* latin-ext */\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 400;\n  src: local('Roboto'), local('Roboto-Regular'), url(/public/font/Fcx7Wwv8OzT71A3E1XOAjvesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');\n  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;\n}\n/* latin */\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 400;\n  src: local('Roboto'), local('Roboto-Regular'), url(/public/font/CWB0XYA8bzo0kSThX0UTuA.woff2) format('woff2');\n  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;\n}\n/* latin-ext */\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 700;\n  src: local('Roboto Bold'), local('Roboto-Bold'), url(/public/font/97uahxiqZRoncBaCEI3aWxJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');\n  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;\n}\n/* latin */\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 700;\n  src: local('Roboto Bold'), local('Roboto-Bold'), url(/public/font/d-6IYplOFocCacKzxwXSOFtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');\n  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;\n}\n", ""]);
 
 	// exports
 

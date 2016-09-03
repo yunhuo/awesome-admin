@@ -15,7 +15,7 @@ const styles = {
 		maxWidth: 360,
 		padding: '112px 48px 64px',
 		margin: '180px auto',
-		background: 'url(/img/logo-nd.png) no-repeat center 40px',
+		background: 'url(/public/img/logo-nd.png) no-repeat center 40px',
 		backgroundSize: 48,
 	},
 	submitBtn: {

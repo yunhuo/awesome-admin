@@ -5,51 +5,51 @@ import { Toolbar, ToolbarTitle } from 'material-ui/Toolbar'
 import { Tab, Tabs } from 'material-ui/Tabs'
 
 let dependencies = [{
-	logo: '/img/stylus.png',
-	title: 'stylus',
+	logo: '/public/img/stylus.png',
+	title: 'styluszzz',
 	content: 'Expressive, robust, feature-rich CSS language built for nodejs'
 }, {
-	logo: '/img/grunt.png',
+	logo: '/public/img/grunt.png',
 	title: 'Grunt',
 	content: 'The JavaScript Task Runner'
 }, {
-	logo: '/img/pm2.png',
+	logo: '/public/img/pm2.png',
 	title: 'pm2',
 	content: 'Production process manager for Node.js apps with a built-in load balancer'
 }, {
-	logo: '/img/webpack.png',
+	logo: '/public/img/webpack.png',
 	title: 'webpack',
 	content: 'A bundler for javascript and friends.'
 }, {
-	logo: '/img/label.png',
+	logo: '/public/img/label.png',
 	title: 'Bable',
 	content: 'Babel is a compiler for writing next generation JavaScript.'
 }, {
-	logo: '/img/normalize.png',
+	logo: '/public/img/normalize.png',
 	title: 'normalize.css',
 	content: 'A modern alternative to CSS resets'
 }, {
-	logo: '/img/gulp.png',
+	logo: '/public/img/gulp.png',
 	title: 'Gulp.js',
 	content: 'The streaming build system'
 }, {
-	logo: '/img/bootstrap.png',
+	logo: '/public/img/bootstrap.png',
 	title: 'Bootstrap.js',
 	content: 'The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.'
 }, {
-	logo: '/img/d3.png',
+	logo: '/public/img/d3.png',
 	title: 'D3.js',
 	content: 'A JavaScript library for manipulating documents based on data'
 }, {
-	logo: '/img/material-ui.png',
+	logo: '/public/img/material-ui.png',
 	title: 'Material ui',
 	content: 'React Component that Implement Google\'s Material Design'
 }, {
-	logo: '/img/react.png',
+	logo: '/public/img/react.png',
 	title: 'React',
 	content: 'A JavaScript library for building user interfaces'
 }, {
-	logo: '/img/express.png',
+	logo: '/public/img/express.png',
 	title: 'Express',
 	content: 'Fast, unopinionated, minimalist web framework for Node.js'
 }]
