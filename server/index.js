@@ -19,7 +19,7 @@ if (process.env.NODE_ENV === 'development') {
 	let compiler = webpack(webpackConfig)
 	app.use(require('webpack-dev-middleware')(compiler, {
 		noInfo: true,
-		publicPath: '/js/'
+		publicPath: '/'
 	}))
 	app.use(require('webpack-hot-middleware')(compiler, {
 		log: console.log,

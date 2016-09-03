@@ -11,6 +11,7 @@ import Subheader from 'material-ui/Subheader'
 import Drawer from 'material-ui/Drawer'
 import { List, ListItem } from 'material-ui/List'
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert'
+import FancyDivider from './FancyDivider'
 
 import Nav from './Nav'
 import Profile from '../user/Profile'
@@ -18,6 +19,8 @@ import Profile from '../user/Profile'
 import { connect } from 'react-redux'
 import { resize, toggleNavOpen } from 'store/modules/base/yard'
 import { logout } from 'store/modules/user/auth'
+
+
 
 @connect(
 	state => ({
@@ -48,6 +51,8 @@ export default class Main extends React.Component {
 			backgroundColor: '#fafafa',
 			boxShadow:'none'
 		}
+
+		
 
 		let { base, children, logout, toggleNavOpen } = this.props
 		let { navOpen, screenWidth } = base
@@ -99,11 +104,12 @@ export default class Main extends React.Component {
 						autoHideTimeout={1000}
 						autoHideDuration={200}
 					>
-					<Subheader>Client</Subheader>
+					<FancyDivider text="client managemente"/>
 						<Nav />
-						<Divider />
+
+						
 						<List>
-							<Subheader>Server</Subheader>
+						<FancyDivider text="server management"/>
           		<ListItem primaryText="GitHub" value="https://github.com/callemall/material-ui" />
           	</List>
 		      </Scrollbars>
