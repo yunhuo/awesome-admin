@@ -7,6 +7,8 @@ import RaisedButton from 'material-ui/RaisedButton'
 import { alert } from 'components/alarm'
 import Password from 'components/password'
 
+import storage from 'simplestorage.js'
+
 import { reduxForm } from 'redux-form'
 import * as authActions from 'store/modules/user/auth'
 
@@ -17,6 +19,9 @@ const styles = {
 		margin: '180px auto',
 		background: 'url(/public/img/logo-nd.png) no-repeat center 40px',
 		backgroundSize: 48,
+	},
+	title: {
+		textAlign: 'center'
 	},
 	submitBtn: {
 		width: '100%', 
@@ -51,6 +56,7 @@ class Login extends React.Component {
 		
     return (
 			<Paper style={styles.paper} zDepth={3}>
+				<h3 style={styles.title}>{storage.get('APP_NAME')}</h3>
 				<form onSubmit={handleSubmit(this.submit)}>
 					<TextField
 						floatingLabelText="账号"

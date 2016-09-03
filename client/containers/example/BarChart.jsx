@@ -4,6 +4,8 @@ import Paper from 'material-ui/Paper'
 import { Toolbar, ToolbarTitle } from 'material-ui/Toolbar'
 import d3 from 'd3'
 
+import { default as Fade } from 'react-fade'
+
 export default class Home extends React.Component {
 	render() {
 		let width = 1200
@@ -25,6 +27,7 @@ export default class Home extends React.Component {
 		let data = [50, 88, 60, 40, 20, 24, 16, 8, 25, 32, 36, 48]
 		
 		return (
+			<Fade duration={0.3}>
 			<Paper className="f-example-bar-chart" zDepth={1}>
 				<Toolbar style={{backgroundColor: '#fff', borderBottom: '1px solid rgb(224, 224, 224)'}}>
 					<ToolbarTitle text="Bar Chart" />
@@ -59,6 +62,7 @@ export default class Home extends React.Component {
 					</svg>
 				</div>
 			</Paper>
+			</Fade>
 		)
 	}
 }

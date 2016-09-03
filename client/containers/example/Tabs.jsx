@@ -4,6 +4,8 @@ import Paper from 'material-ui/Paper'
 import { Toolbar, ToolbarTitle } from 'material-ui/Toolbar'
 import { Tab, Tabs } from 'material-ui/Tabs'
 
+import { default as Fade } from 'react-fade'
+
 let dependencies = [{
 	logo: '/public/img/stylus.png',
 	title: 'styluszzz',
@@ -57,6 +59,7 @@ let dependencies = [{
 export default class UserList extends React.Component {
 	render() {
 		return (
+			<Fade duration={0.3}>
 			<Paper className="f-example-tabs" zDepth={1}>
 				<Toolbar style={{backgroundColor: '#fff', borderBottom: '1px solid #EBEBEB'}}>
 					<ToolbarTitle text="Dependencies" />
@@ -81,6 +84,7 @@ export default class UserList extends React.Component {
 					</Tab>
 				</Tabs>
 			</Paper>
+			</Fade>
 		);
 	}
 }

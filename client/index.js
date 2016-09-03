@@ -14,6 +14,8 @@ import thunkMiddleware from 'store/middleware/thunkMiddleware'
 import loggerMiddleware from 'store/middleware/loggerMiddleware'
 import reducers from 'store/index'
 
+
+
 import Global from './containers/base/Global'
 import Yard from './containers/base/Yard'
 import Login from './containers/user/Login'
@@ -26,7 +28,13 @@ import TodoList from './containers/example/TodoList'
 import CreateContent from './containers/example/CreateContent'
 import X from './containers/example/X'
 
+import storage from 'simplestorage.js'
+
+storage.set('APP_NAME', '网站管理系统');
+
 injectTapEventPlugin()
+
+
 
 const createStoreWithMiddleware = applyMiddleware(syncHistory(hashHistory), thunkMiddleware, loggerMiddleware)(createStore)
 const store = createStoreWithMiddleware(reducers)

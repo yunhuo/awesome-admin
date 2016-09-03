@@ -20,6 +20,8 @@ import { connect } from 'react-redux'
 import { resize, toggleNavOpen } from 'store/modules/base/yard'
 import { logout } from 'store/modules/user/auth'
 
+import storage from 'simplestorage.js'
+
 
 
 @connect(
@@ -71,7 +73,7 @@ export default class Main extends React.Component {
 					style={styles.appBar}
 					titleStyle={styles.appBarTitle}
 					iconStyleLeft={styles.appBarLeft}
-					title="Dashboard" 
+					title={storage.get('APP_NAME')}
 					showMenuIconButton={!docked}
 					onLeftIconButtonTouchTap={toggleNavOpen}
 					iconElementRight={
@@ -132,7 +134,8 @@ const styles = {
 		boxShadow: 'none'
 	},
 	appBarTitle: {
-		color: '#00bcd4'
+		color: '#00bcd4',
+		fontSize: '19px'
 	},
 	appBarLeft: {
 		color: '#00bcd4'

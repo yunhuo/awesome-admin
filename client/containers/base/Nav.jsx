@@ -26,19 +26,22 @@ const navItems = [{
 	text: 'Todo List',
 	value: '/example/todo-list'
 },{
+	text: 'Test',
+	value: '/example/x'
+},{
 	text: 'Charts',
 	children: [{
 		text: 'Bar Chart',
-		value: '/example/x'
+		value: '/example/y'
 	}, {
 		text: 'Line Chart',
-		value: '/example/x'
+		value: '/example/y'
 	}, {
 		text: 'Pie Chart',
-		value: '/example/x'
+		value: '/example/y'
 	}, {
 		text: 'Area Chart',
-		value: '/example/x'
+		value: '/example/y'
 	}]
 }]
 

@@ -3,7 +3,7 @@
 }
 
 #nprogress .bar {
-  background: #FF432B;
+  background: #43A047;
 
   position: fixed;
   z-index: 999999;
@@ -21,7 +21,7 @@
   right: 0px;
   width: 100px;
   height: 100%;
-  box-shadow: 0 0 10px #FF432B, 0 0 5px #FF432B;
+  box-shadow: 0 0 10px #A5D6A7, 0 0 5px #A5D6A7;
   opacity: 1;
 
   -webkit-transform: rotate(3deg) translate(0px, -4px);
@@ -31,7 +31,7 @@
 
 /* Remove these to get rid of the spinner */
 #nprogress .spinner {
-  display: block;
+  display: none;
   position: fixed;
   z-index: 999999;
   top: 18px;

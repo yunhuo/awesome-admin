@@ -1,5 +1,5 @@
 {
-  "name": "react-material-admin",
+  "name": "awesome-dashboard",
   "version": "1.0.0",
   "description": "admin",
   "main": "server/index.js",
@@ -7,7 +7,7 @@
     "dev": "set NODE_ENV=development&& webpack --config webpack/dev.config.js --watch",
     "build": "webpack --progress --colors --config webpack/pro.config.js"
   },
-  "author": "chenzhenyao",
+  "author": "liuyanwang",
   "license": "ISC",
   "repository": {},
   "dependencies": {

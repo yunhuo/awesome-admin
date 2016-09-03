@@ -3,6 +3,7 @@ import React from 'react'
 import Paper from 'material-ui/Paper'
 import { Toolbar, ToolbarTitle } from 'material-ui/Toolbar'
 import d3 from 'd3'
+import { default as Fade } from 'react-fade'
 
 export default class LineChart extends React.Component {
 	render() {
@@ -39,6 +40,7 @@ export default class LineChart extends React.Component {
 
 		window.d3 = d3
 		return (
+			<Fade duration={0.3}>
 			<Paper className="f-example-line-chart" zDepth={0}>
 				<Toolbar style={{backgroundColor: '#fff', borderBottom: '1px solid rgb(224, 224, 224)'}}>
 					<ToolbarTitle text="Line Chart" />
@@ -64,6 +66,7 @@ export default class LineChart extends React.Component {
 					</svg>
 				</div>
 			</Paper>
+			</Fade>
 		);
 	}
 }

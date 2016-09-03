@@ -12,8 +12,7 @@ import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColu
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert'
 import ContentAdd from 'material-ui/svg-icons/content/add'
 
-
-
+import { default as Fade } from 'react-fade'
 
 let dependencies = [{
 	logo: '/img/stylus.png',
@@ -50,6 +49,7 @@ let styles = {
 export default class List extends React.Component {
 	render() {
 		return (
+      <Fade duration={0.3}>
 			<Paper style={styles.root} zDepth={1}>
 
 				<Toolbar style={{
@@ -147,6 +147,7 @@ export default class List extends React.Component {
 					
 				</div>
 			</Paper>
+      </Fade>
 		);
 	}
 }
