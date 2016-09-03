@@ -4,11 +4,8 @@
   "description": "admin",
   "main": "server/index.js",
   "scripts": {
-    "debug": "node-debug -p 8081 server/index.js",
-    "dev": "set NODE_ENV=development&& nodemon --watch server --watch webpack server/index.js",
-    "build": "webpack --progress --colors --config webpack/pro.config.js",
-    "prestart": "npm run build",
-    "start": "node server/index.js"
+    "dev": "set NODE_ENV=development&& webpack --config webpack/dev.config.js --watch",
+    "build": "webpack --progress --colors --config webpack/pro.config.js"
   },
   "author": "chenzhenyao",
   "license": "ISC",

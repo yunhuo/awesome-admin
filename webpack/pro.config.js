@@ -2,7 +2,7 @@ var webpack = require('webpack')
 var path = require('path')
 
 module.exports = {
-	devtool: '#source-map',
+	//devtool: '#source-map',
 	context: path.join(__dirname, '..'), // absolute path!
 	resolve: {
     modulesDirectories: ['client', 'node_modules'],
@@ -55,6 +55,8 @@ module.exports = {
 		new webpack.optimize.OccurenceOrderPlugin(),
 		new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js'),
 		new webpack.optimize.UglifyJsPlugin({
+			sourceMap: false,
+			mangle: false,
 			compressor: {
 				warnings: false
 			}

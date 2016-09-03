@@ -85,6 +85,7 @@ class CreateContent extends React.Component {
         ref="editor"
         editorState={editorState}
         onChange={this.onChange} />
+        
 				</div>
 			</Paper>
 			</Fade>
